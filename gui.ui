@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>793</width>
+    <width>729</width>
     <height>432</height>
    </rect>
   </property>
@@ -22,7 +22,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>381</width>
+      <width>171</width>
       <height>41</height>
      </rect>
     </property>
@@ -45,15 +45,15 @@ QPushButton:pressed{
 }</string>
     </property>
     <property name="text">
-     <string>All trackers</string>
+     <string>All Trackers</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnBest">
+   <widget class="QPushButton" name="btnBestIP">
     <property name="geometry">
      <rect>
-      <x>400</x>
+      <x>550</x>
       <y>10</y>
-      <width>381</width>
+      <width>171</width>
       <height>41</height>
      </rect>
     </property>
@@ -76,7 +76,7 @@ QPushButton:pressed{
 }</string>
     </property>
     <property name="text">
-     <string>Best trackers</string>
+     <string>Best Trackers IP</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="edtField">
@@ -84,7 +84,7 @@ QPushButton:pressed{
      <rect>
       <x>10</x>
       <y>60</y>
-      <width>771</width>
+      <width>711</width>
       <height>321</height>
      </rect>
     </property>
@@ -106,6 +106,68 @@ QPushButton:pressed{
     </property>
     <property name="text">
      <string>Made by DarkCeptor44</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnBest">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background:#272727;
+	color:#fff;
+	border-radius:3px;
+}
+
+QPushButton:hover{
+	background-color:#383838;
+}
+
+QPushButton:pressed{
+	background-color:#272727;
+}</string>
+    </property>
+    <property name="text">
+     <string>Best Trackers</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAllIP">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>10</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background:#272727;
+	color:#fff;
+	border-radius:3px;
+}
+
+QPushButton:hover{
+	background-color:#383838;
+}
+
+QPushButton:pressed{
+	background-color:#272727;
+}</string>
+    </property>
+    <property name="text">
+     <string>All Trackers IP</string>
     </property>
    </widget>
   </widget>

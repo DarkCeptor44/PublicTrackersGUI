@@ -30,4 +30,4 @@ venv.bak/
 .vscode
 *.bat
 
-.idea
+.idea/

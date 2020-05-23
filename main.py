@@ -4,8 +4,10 @@ from concurrent.futures import ThreadPoolExecutor
 import pathlib
 import requests
 
-URL_ALL = 'https://ngosang.github.io/trackerslist/trackers_all_ip.txt'
-URL_BEST = 'https://ngosang.github.io/trackerslist/trackers_best_ip.txt'
+URL_ALL = 'https://ngosang.github.io/trackerslist/trackers_all.txt'
+URL_BEST = 'https://ngosang.github.io/trackerslist/trackers_best.txt'
+URL_ALL_IP = 'https://ngosang.github.io/trackerslist/trackers_all_ip.txt'
+URL_BEST_IP = 'https://ngosang.github.io/trackerslist/trackers_best_ip.txt'
 
 
 class GUI(QtWidgets.QMainWindow):
@@ -15,10 +17,14 @@ class GUI(QtWidgets.QMainWindow):
 
         self.btnAll = self.findChild(QtWidgets.QPushButton, 'btnAll')
         self.btnBest = self.findChild(QtWidgets.QPushButton, 'btnBest')
+        self.btnAllIP = self.findChild(QtWidgets.QPushButton, 'btnAllIP')
+        self.btnBestIP = self.findChild(QtWidgets.QPushButton, 'btnBestIP')
         self.edtField = self.findChild(QtWidgets.QTextEdit, 'edtField')
 
         self.btnAll.clicked.connect(self.getAllTrackers)
         self.btnBest.clicked.connect(self.getBestTrackers)
+        self.btnAllIP.clicked.connect(self.getAllTrackersIP)
+        self.btnBestIP.clicked.connect(self.getBestTrackersIP)
 
         self.show()
 
@@ -27,6 +33,12 @@ class GUI(QtWidgets.QMainWindow):
 
     def getBestTrackers(self):
         self.exec_in_thread(URL_BEST)
+
+    def getAllTrackersIP(self):
+        self.exec_in_thread(URL_ALL_IP)
+
+    def getBestTrackersIP(self):
+        self.exec_in_thread(URL_BEST_IP)
 
     @staticmethod
     def thread_function(url):
