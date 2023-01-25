@@ -14,3 +14,8 @@ python main.py
 ```
 
 And that's it! You can make a `bat` file which does the above command in the folder and create a shortcut to it anywhere.
+
+Or you can install PyInstaller with `pip install pyinstaller` and use this command to build an exe:
+```
+pyinstaller --add-data "gui.ui;." -w -n PublicTrackersGUI -F main.py
+```
